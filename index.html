@@ -326,13 +326,8 @@ body{font-family:'Montserrat',sans-serif;background:#fff;color:var(--text-dark);
   /* CONTACT FORM */
   .cta-section { grid-template-columns: 1fr; }
   .cta-left { padding: 48px 24px 32px; border-right: none; border-bottom: 0.5px solid var(--border); }
-  .cta-title { font-size: clamp(32px, 10vw, 48px); }
-  .cta-right { padding: 40px 24px; }
-  .form-field { grid-template-columns: 1fr; gap: 6px; }
-  .form-label { font-size: 12px; }
-  .form-input { font-size: 14px; padding: 4px 0; }
-  .form-btn { padding: 12px 18px; font-size: 10px; }
-  .form-btn-arrow { width: 40px; height: 40px; }
+  .cta-title { font-size: clamp(28px, 8vw, 40px); }
+  .cta-right { padding: 36px 24px !important; }
 
   /* FOOTER */
   .footer { flex-direction: column; gap: 20px; padding: 28px 20px; text-align: center; }
@@ -575,54 +570,16 @@ body{font-family:'Montserrat',sans-serif;background:#fff;color:var(--text-dark);
 </div>
 
 <!-- CTA -->
-<section class="cta-section" id="contacto">
-  <div class="cta-left">
-    <p class="eyebrow" style="margin-bottom:20px">+ Contacto</p>
-    <h2 class="cta-title">Sigamos construyendo juntos</h2>
-    <p class="cta-sub">Contános tu proyecto y trabajemos para hacerlo realidad.</p>
+<section class="cta-section" id="contacto" style="min-height:0;">
+  <div class="cta-left" style="padding:36px 52px;display:flex;flex-direction:column;justify-content:center;border-right:0.5px solid var(--border);">
+    <p class="eyebrow" style="margin-bottom:10px;">+ Contacto</p>
+    <h2 class="cta-title" style="font-size:clamp(22px,2.8vw,34px);line-height:1.05;">Sigamos construyendo juntos</h2>
   </div>
-  <div class="cta-right">
-    <div class="form-step active" id="step1">
-      <p class="form-progress">01 / 02</p>
-      <div class="form-field">
-        <label class="form-label">Nombre y apellidos <span class="req">*</span></label>
-        <input class="form-input" type="text" id="f-nombre" placeholder="Tu nombre completo">
-      </div>
-      <div class="form-field">
-        <label class="form-label">Correo electrónico <span class="req">*</span></label>
-        <input class="form-input" type="email" id="f-email" placeholder="Tu email">
-      </div>
-      <div class="form-field">
-        <label class="form-label">Teléfono</label>
-        <input class="form-input" type="tel" id="f-tel" placeholder="Tu teléfono">
-      </div>
-      <div class="form-field">
-        <label class="form-label">Empresa / Organización</label>
-        <input class="form-input" type="text" id="f-empresa" placeholder="Tu empresa">
-      </div>
-      <div class="form-actions">
-        <button class="form-btn" onclick="goStep2()">Siguiente</button>
-        <div class="form-btn-arrow" onclick="goStep2()">&#8594;</div>
-      </div>
-    </div>
-    <div class="form-step" id="step2">
-      <p class="form-progress">02 / 02</p>
-      <div class="form-field" style="grid-template-columns:1fr;display:block;padding:20px 0;border-top:0.5px solid rgba(27,58,92,0.2);">
-        <label class="form-label" style="display:block;margin-bottom:16px;">Contános tu proyecto <span class="req">*</span></label>
-        <textarea class="form-textarea" id="f-desc" placeholder="Describiá brevemente el proyecto, tipo de obra, ubicación y cualquier detalle relevante..." style="min-height:140px;"></textarea>
-      </div>
-      <div class="form-actions">
-        <button class="form-btn" onclick="goStep1()" style="color:var(--text-mid);border-color:rgba(27,58,92,0.15);">Atrás</button>
-        <button class="form-btn" style="margin-left:12px;" onclick="sendForm()">Enviar consulta</button>
-        <div class="form-btn-arrow" onclick="sendForm()">&#8594;</div>
-      </div>
-    </div>
-    <div class="form-step" id="stepOk">
-      <div class="form-success">
-        <div class="form-success-icon">&#10003;</div>
-        <div class="form-success-title">¡Consulta enviada!</div>
-        <p class="form-success-text">Nos pondremos en contacto a la brevedad.<br>obras@ingenii.com.ar</p>
-      </div>
+  <div class="cta-right" style="display:flex;flex-direction:column;justify-content:center;padding:36px 52px;gap:14px;">
+    <p style="font-size:13px;font-weight:400;color:var(--text-mid);line-height:1.7;max-width:320px;">Contanos tu proyecto y trabajemos para hacerlo realidad.</p>
+    <div>
+      <p style="font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue-light);margin-bottom:8px;">Escribinos</p>
+      <a href="mailto:obras@ingenii.com.ar" style="font-family:'Bodoni Moda',serif;font-style:italic;font-size:18px;color:var(--navy-dark);text-decoration:none;border-bottom:1.5px solid var(--blue-light);padding-bottom:3px;">obras@ingenii.com.ar</a>
     </div>
   </div>
 </section>
